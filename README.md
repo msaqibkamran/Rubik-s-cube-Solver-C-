@@ -29,18 +29,18 @@ final configurations of the cube and will find a sequence of moves that will tra
 state into the final state. The solutions will be found by using one uninformed search strategy i.e.
 iterative-deepening and one informed search strategy named A*.
 
-Methodology
-•	Iterative Deepening Algorithm
+### Methodology
+### Iterative Deepening Algorithm
 In this algorithm, we used a stack to maintain the nodes and we simply pop the node (at the top) and compares with goal state then if it is not goal then check depth has it reached the limit if yes then stop and remove it from stack else make its 12 childs and push in the stack and repeat until the goal is found.
 
-•	A* Algorithm:
+### A* Algorithm:
 In this technique, we for choosing a child we used a heuristic function which gave us a score by comparing two states and telling how much nodes of it are matching. So instead of blindly picking a child node we picked with the highest score and add the cost from start to that node and cost from that node to goal (guess given by our heuristic function) and maintain two lists (Open and Closed). At each step we compare this cost if a node with the same position as successor is in the OPEN list which has a lower cost than successor, skip this successor if a node with the same position as successor is in the CLOSED list which has a lower cost than successor, skip this successor otherwise, add the node to the open list and repeat this until the goal is found.
 
-Results
+### Results
 In Iterative Deepening, if the cube is 5-10 moves away it usually finds the solution in seconds but if current state is messed up then it takes a lot time and consumes more memory 12depth, usually program stops due to filling of all the memory and takes hours, may be days in solving and program closes due to short memory. But in contrast, A* guess it in less moves with more efficiency in much less time and finds the solution. However, the heuristic should be good enough to guess correct moves. 
 Our heuristic was number of mismatches at a given state from the goal state.
 
-Conclusions
+### Conclusions
 As we can see the results, it clearly shows that A* algorithm is far better than Iterative Deepening.
 A* algorithm gives solution in much less time and more optimal solution. In contrast, Iterative deepening takes much more memory, time and is far less efficient than A*. It makes 12Depth nodes which requires much memory and processing time. But A* solves the problem in much less time and taking less memory by making wise decisions. But A* mainly depends on the heuristic function, the more the guess of heuristic is correct, the less and more optimal solution it will give. However, a bad heuristic can guide us to a wrong path and may take more time. 
 In short, A* is much better technique than Iterative Deepening in solving the required problem.
